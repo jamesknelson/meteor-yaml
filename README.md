@@ -26,3 +26,4 @@ Attempts to return the given array as a yaml string.
 Parameters:
 `inline`: The level where you switch to inline YAML
 `spaces`: The number of spaces used for indentation
+
