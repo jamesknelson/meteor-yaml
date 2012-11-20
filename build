@@ -1,0 +1,36 @@
+#!/bin/sh
+cd `dirname $0`
+
+# Generate yaml.js
+file="yaml.js"
+
+> $file
+
+echo Compiling $file ...
+
+echo " - LICENSE"
+
+echo "/*" >> $file
+cat lib/yaml.js/LICENSE >> $file
+echo "\n*/" >> $file
+echo "(function(){" >> $file
+
+echo " - YamlParseException.js"
+cat lib/yaml.js/src/yaml/YamlParseException.js >> $file
+echo " - YamlInline.js"
+cat lib/yaml.js/src/yaml/YamlInline.js >> $file
+echo " - YamlParser.js"
+cat lib/yaml.js/src/yaml/YamlParser.js >> $file
+echo " - YamlEscaper.js"
+cat lib/yaml.js/src/yaml/YamlEscaper.js >> $file
+echo " - YamlUnescaper.js"
+cat lib/yaml.js/src/yaml/YamlUnescaper.js >> $file
+echo " - YamlDumper.js"
+cat lib/yaml.js/src/yaml/YamlDumper.js >> $file
+
+echo " - api.js"
+cat lib/api.js >> $file 
+
+echo "}).call(this);" >> $file
+
+echo "yaml.js compiled."

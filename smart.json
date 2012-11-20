@@ -1,0 +1,8 @@
+{
+  "name": "yaml",
+  "description": "A meteor-packaged yaml parser/stringifier based on Jeremy Fa's yaml.js",
+  "homepage": "https://github.com/jamesknelson/meteor-yaml",
+  "author": "James Nelson <self@jamesknelson.com> (http://www.jamesknelson.com)",
+  "version": "0.1.3",
+  "git": "https://github.com/jamesknelson/meteor-yaml.git"
+}

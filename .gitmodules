@@ -1,0 +1,3 @@
+[submodule "lib/yaml.js"]
+	path = lib/yaml.js
+	url = git://github.com/jeremyfa/yaml.js.git
