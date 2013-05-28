@@ -2,15 +2,15 @@ Package.describe({
   summary: "underscore.string repackaged for Meteor"
 });
 
-var fs = require('fs'),
+var fs = Npm.require('fs'),
 	yaml;
 
 // To the gods of meteor - please don't make me do this! :(
 try {
-	yaml = require('../../packages/yaml/yaml.js');
+	yaml = Npm.require('../../packages/yaml/yaml.js');
 }
 catch(e) {
-	yaml = require(process.cwd() + "/.meteor/meteorite/packages/yaml/yaml.js");
+	yaml = Npm.require(process.cwd() + "/.meteor/meteorite/packages/yaml/yaml.js");
 }
 
 Package.on_use(function (api, where) {
