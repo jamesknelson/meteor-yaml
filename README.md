@@ -7,7 +7,7 @@ It is based on [yaml.js](https://github.com/jeremyfa/yaml.js) by jeremyfa.
 ## Installation
 
 ```
-mrt install yaml
+mrt add yaml
 ```
 
 ## Usage
