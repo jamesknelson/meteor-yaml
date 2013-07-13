@@ -3,15 +3,10 @@ Package.describe({
 });
 
 var fs = Npm.require('fs'),
-	yaml;
+  path = Npm.require('path'),
+  yaml;
 
-// To the gods of meteor - please don't make me do this! :(
-try {
-	yaml = Npm.require('../../packages/yaml/yaml.js');
-}
-catch(e) {
-	yaml = Npm.require(process.cwd() + "/.meteor/meteorite/packages/yaml/yaml.js");
-}
+yaml = Npm.require(path.join(process.env.PACKAGE_DIRS, 'yaml', 'yaml.js'));
 
 Package.on_use(function (api, where) {
   where = where || ['client', 'server'];
